@@ -70,29 +70,52 @@ const Navbar = () => {
             <ul className="dark:text-[#DDE6ED] flex flex-col justify-center items-center gap-14 font-poppins text-md font-medium p-3 h-screen text-gray-800 ">
               <li
                 onClick={handleMenu}
-                className="hover:text-black hover:bg-[#EEF5FF] text-2xl font-poppins font-bold  text-center border-gray-800 border-2 p-2 rounded-sm w-full"
+                className="hover:text-black hover:bg-[#EEF5FF] text-2xl font-poppins font-bold text-center border-gray-800 border-2 p-2 rounded-sm w-full"
               >
-                <NavLink to="domains">Domains</NavLink>
+                <NavLink to={"login"}>Login</NavLink>
               </li>
+
               <li
                 onClick={handleMenu}
                 className="hover:text-black hover:bg-[#EEF5FF] text-2xl font-poppins font-bold text-center border-gray-800 border-2 p-2 rounded-sm w-full"
               >
-                <NavLink to={"about"}>About</NavLink>
+                <NavLink to={"register"}>Register</NavLink>
               </li>
-              {options.map((option, index) => (
-                <li
-                  onClick={() => setTheme(option.text) && setIcon(!icon)}
-                  key={index}
-                  className={`duration-150 text-2xl font-poppins font-bold text-center border-gray-800 border-2 p-2 rounded-sm w-full    bg-transparent ${
-                    theme === option.text
-                      ? " dark:text-[#2F58CD] text-yellow-600 "
-                      : "text-black dark:text-white"
-                  }`}
+
+              <li
+                onClick={handleMenu}
+                className="hover:text-black hover:bg-[#EEF5FF] text-2xl font-poppins font-bold text-center border-gray-800 border-2 p-2 rounded-sm w-full"
+              >
+                <NavLink to={"my-orders"}>My Orders</NavLink>
+              </li>
+
+              <li className="hover:text-black hover:bg-[#EEF5FF] text-2xl font-poppins font-bold text-center border-gray-800 border-2 p-2 rounded-sm w-full">
+                <NavLink
+                  to={"about"}
+                  className="flex justify-center items-center gap-1 relative "
                 >
-                  <button className="text-2xl ">{option.icon}</button>
-                </li>
-              ))}
+                  Cart <FaShoppingCart className="text-2xl" />{" "}
+                  <span className="absolute w-[18px] h-[18px] bg-red-500 right-28 rounded-full -top-1 flex justify-center items-center text-sm text-white font-extralight">
+                    2
+                  </span>
+                </NavLink>
+              </li>
+              <div className="border-2 border-black flex justify-between items-center gap-10 rounded-full w-ful px-1 py-1 relative  ">
+                <span className="absolute w-[3px] h-[50px] right-[60px] rounded-full  bg-[#435255]" />
+                {options.map((option, index) => (
+                  <li
+                    onClick={() => setTheme(option.text)}
+                    key={index}
+                    className={`duration-150 bg-transparent ${
+                      theme === option.text
+                        ? " dark:text-[#2F58CD] text-yellow-600 "
+                        : "text-black dark:text-white"
+                    }`}
+                  >
+                    <button className="text-4xl ">{option.icon}</button>
+                  </li>
+                ))}
+              </div>
             </ul>
           </div>
         )}
@@ -138,7 +161,6 @@ const Navbar = () => {
                   : "text-black dark:text-white"
               }`}
             >
-
               <button className="text-2xl ">{option.icon}</button>
             </li>
           ))}
