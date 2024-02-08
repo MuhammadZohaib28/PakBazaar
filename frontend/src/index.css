@@ -12,3 +12,10 @@
   opacity: 1;
   transform: translateX(0);
 }
+.carouselItem {
+  @apply shadow-[0_4px_8px_0_rgba(0,0,0,0.2)] w-[23rem] h-[35rem] text-center overflow-hidden mr-[5px];
+
+}
+.carouselItem div.carousel-desc {
+  @apply text-2xl font-light leading-[1.3] text-[color:var(--color-dark)];
+}

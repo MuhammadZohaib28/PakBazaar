@@ -46,7 +46,7 @@ const Navbar = () => {
   }, [theme]);
 
   return (
-    <nav className="flex justify-between items-center p-6 pl-2 pr-2 md:pl-28 md:pr-28 bg-[#EEF5FF] dark:bg-[#0F0F0F]">
+    <nav className="flex justify-between items-center p-6 pl-2 pr-2 md:pl-28 md:pr-28 bg-[#FFF3DA] dark:bg-[#0F0F0F]">
       <div className="md:hidden relative flex justify-between items-center w-full dark:text-[#DDE6ED]">
         <h1 className="capitalize text-5xl font-semibold font-dancing dark:text-[#DDE6ED]">
           <NavLink to={"/"} className={"dark:text-[#DDE6ED] "}>

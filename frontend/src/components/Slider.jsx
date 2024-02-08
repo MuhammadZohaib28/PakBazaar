@@ -9,7 +9,7 @@ const Slider = () => {
   const slideLength = sliderData.length;
   const autoPlay = true;
   let slideInterval;
-  const intervalTime = 3000;
+  const intervalTime = 5000;
 
   const navigate = useNavigate();
   const prevSlide = () => {
@@ -56,7 +56,7 @@ const Slider = () => {
           {index === currSlide && (
             <>
               <img src={slide.image} alt="slide" />
-              <div className="absolute text-center top-[23rem] left-1/2 opacity-100 w-1/2 p-[3rem] flex justify-self-center items-center flex-col -translate-x-1/2 bg-[#e1f0da67]  box-border overflow-hidden shadow-xl shadow-black">
+              <div className="absolute text-center top-[17rem] left-1/2 opacity-100 w-1/2 p-[3rem] flex justify-self-center items-center flex-col -translate-x-1/2 bg-[#e1f0da67]  box-border overflow-hidden shadow-xl shadow-black">
                 <h1 className="z-50 text-5xl font-poppins font-semibold text-black">
                   {slide.heading}
                 </h1>
